@@ -1,7 +1,7 @@
 import cv2
 
 # imread(): this method loads an image from the specified file
-img = cv2.imread("gumball.jpg")
+img = cv2.imread("images/gumball.jpg")
 
 # Seeing the shape width and height and channels of the image using shape attribute.
 print(img.shape)
@@ -9,7 +9,7 @@ print(img.shape)
 # imshow(): creating GUI window to display an image on screen
 # first Parameter: is windows title (should be in string format)
 # Second Parameter: is image array
-cv2.imshow("image", img)
+cv2.imshow("Gumball", img)
 
 # waitKey(): To hold the window on screen
 # First Parameter: is for holding screen for specified milliseconds
