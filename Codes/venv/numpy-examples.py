@@ -163,3 +163,25 @@ print(joined_array2)
 # Split array
 split_array = np.array_split(old_arr, 3)
 print(split_array)
+
+# Searching Arrays
+search_arr = np.array([1, 2, 3, 4, 5, 4, 4])
+print(np.where(search_arr == 4))
+
+# Search Sorted performs a binary search in the array
+# returns the index where the specified value would be inserted to maintain the search order.
+bsearch_array = np.array([6, 7, 8, 9])
+print(np.searchsorted(bsearch_array, 7))
+
+# Sorting Arrays
+unsorted_arr = np.array([3, 2, 0, 1])
+print(np.sort(unsorted_arr))
+
+# Filtering Arrays
+unfiltered_arr = np.array([41, 42, 43, 44])
+filtered_arr = unfiltered_arr[[True, False, True, False]]
+print(filtered_arr)
+
+# Creating Filter Directly From Array
+filtered_arr = unfiltered_arr[unfiltered_arr > 42]
+print(filtered_arr)
