@@ -123,3 +123,43 @@ original_arr[0] = 42
 
 print(original_arr)
 print(view_arr)
+
+# Get the Shape of an Array
+print(my_arr.shape)
+print(original_arr.shape)
+print(highD_arr.shape)
+
+# Reshape From 1-D to 2-D
+old_arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+new_arr = old_arr.reshape(4, 3)
+print(new_arr)
+
+# Flattening array means converting a multidimensional array into a 1D array.
+ordinary_arr = np.array([[1, 2, 3], [4, 5, 6]])
+flat_arr = ordinary_arr.reshape(-1)
+print(flat_arr)
+
+# Iterating on Each Scalar Element using nditer()
+iterating_arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+for i in np.nditer(iterating_arr):
+    print(i)
+
+# Enumerated Iteration Using ndenumerate()
+for idx, x in np.ndenumerate(iterating_arr):
+    print(idx, x)
+
+# Joining NumPy Arrays
+array1 = np.array([1, 2, 3])
+array2 = np.array([4, 5, 6])
+joined_array = np.concatenate((array1, array2))
+print(joined_array)
+
+# Join two 2-D arrays along rows (axis=1)
+arr1 = np.array([[1, 2], [3, 4]])
+arr2 = np.array([[5, 6], [7, 8]])
+joined_array2 = np.concatenate((arr1, arr2), axis=1)
+print(joined_array2)
+
+# Split array
+split_array = np.array_split(old_arr, 3)
+print(split_array)
