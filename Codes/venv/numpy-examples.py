@@ -41,3 +41,85 @@ print(threeD_arr[0, 1, 2])
 
 # Negative Indexing
 print('Last element from 2nd dim: ', twoD_arr[1, -1])
+
+# Slicing arrays: [start:end] or [start:end:step]
+sliced_arr = np.array([1, 2, 3, 4, 5, 6, 7])
+
+# Slice elements from index 1 to index 5
+print(sliced_arr[1:5])
+
+# Slice elements from index 4 to the end of the array
+print(sliced_arr[4:])
+
+# Slice elements from the beginning to index 4
+print(sliced_arr[:4])
+
+# Negative Slicing - slice from the index 3 from the end to index 1 from the end
+print(sliced_arr[-3:-1])
+
+# Slice with step
+print(sliced_arr[1:5:2])
+
+# Return every other element from the array by 2 steps
+print(sliced_arr[::2])
+
+# From both elements, return index 2
+my_arr = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+print(my_arr[0:2, 2])
+
+# From both elements, slice index 1 to index 4 (not included), this will return a 2-D array
+print(my_arr[0:2, 1:4])
+
+# Checking the Data Type of Array
+print(my_arr.dtype)
+
+# Creating Arrays With a Defined Data Type
+defined_arr = np.array([1, 2, 3, 4], dtype='S')
+print(defined_arr)
+print(defined_arr.dtype)
+
+# Converting Data Type on Existing Arrays
+float_arr = np.array([1.1, 2.1, 3.1])
+int_arr = float_arr.astype(int)
+
+print(int_arr)
+print(int_arr.dtype)
+
+""" Data Types in NumPy
+i - integer
+b - boolean
+u - unsigned integer
+f - float
+c - complex float
+m - timedelta
+M - datetime
+O - object
+S - string
+U - unicode string
+V - fixed chunk of memory for other type ( void )
+"""
+
+""" astype function's arguments
+int
+bool
+complex
+float
+object
+str
+"""
+
+# Copy
+original_arr = np.array([1, 2, 3, 4, 5])
+copy_arr = original_arr.copy()
+original_arr[0] = 42
+
+print(original_arr)
+print(copy_arr)
+
+# View
+original_arr = np.array([1, 2, 3, 4, 5])
+view_arr = original_arr.view()
+original_arr[0] = 42
+
+print(original_arr)
+print(view_arr)
