@@ -1,5 +1,5 @@
 # Image Processing with Python
-> This repository intends to cover all examples about image processing with python3
+> This repository intends to cover all topics about image processing with python3
 ----
 
 <p align="center">
